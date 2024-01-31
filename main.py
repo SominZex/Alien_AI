@@ -76,18 +76,18 @@ if __name__ == '__main__':
         print("Listening...")
         query = takeCommand()
         # todo: Add more sites
-        sites = [["youtube", "https://www.youtube.com"], ["wikipedia", "https://www.wikipedia.com"], ["google", "https://www.google.com"],]
+        sites = [["youtube", "https://www.youtube.com"], ["wikipedia", "https://www.wikipedia.com"], ["google", "https://www.google.com"]]
         for site in sites:
             if f"Open {site[0]}".lower() in query.lower():
                 say(f"Opening {site[0]} sir...")
                 webbrowser.open(site[1])
         # todo: Add a feature to play a specific song
         if "open music" in query:
-            musicPath = "/Users/harry/Downloads/downfall-21371.mp3"
+            musicPath = "your_local_music_path/name_of_music.mp3"
             os.system(f"open {musicPath}")
 
         elif "the time" in query:
-            musicPath = "/Users/harry/Downloads/downfall-21371.mp3"
+            musicPath = "your_local_music_path/name_of_music.mp3"
             hour = datetime.datetime.now().strftime("%H")
             min = datetime.datetime.now().strftime("%M")
             say(f"Sir time is {hour} bajke {min} minutes")
